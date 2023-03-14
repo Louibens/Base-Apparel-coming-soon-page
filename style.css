@@ -36,7 +36,7 @@ body {
 
 #logo {
     margin-top: 50px;
-    margin-left: 200px
+    margin-left: 20%
 }
 
 #we {
@@ -44,7 +44,7 @@ body {
     font-weight: 300;
     letter-spacing: 10px;
     margin-top: 100px;
-    margin-left: 200px;
+    margin-left: 20%;
     color: hsl(0, 36%, 70%)
 }
 
@@ -52,37 +52,63 @@ body {
     font-size: 60px;
     font-weight: 600;
     letter-spacing: 10px;
-    margin-left: 200px;
+    margin-left: 20%;
     color: hsl(0, 6%, 24%);
     margin-right: 300px
 }
 
 #info {
     color: hsl(0, 36%, 70%);
-    margin-left: 200px;
-    margin-right: 20%;
+    margin-left: 20%;
+    margin-right: 36%;
     margin-top: 30px;
     margin-bottom: 50px
 }
 
+#sign-up {
+    display: flex;
+    flex-direction: column;
+}
+
 #email {
-    margin-left: 200px;
+    margin-left: 20%;
     display: flex;
     flex-direction: row;
+    margin-right: 36%;
+    flex-wrap: wrap;
 }
 
 input {
     border-radius: 30px;
     border: 1px solid hsl(0, 36%, 70%);
-    width: 300px;
+    min-width: 300px;
     height: 40px;
     padding: 10px;
     color: hsl(0, 36%, 70%);
     box-sizing: border-box;
 }
 
+input:invalid {
+    border: 2px solid hsl(0, 93%, 68%)
+    
+}
+
+.error-message {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin: 10px;
+  }
+
+.error-icon {
+    display: none;
+    color: hsl(0, 93%, 68%);
+    margin: -80px;
+  }
+
+
+
 button {
-    width: 70px;
+    min-width: 70px;
     height: 40px;
     padding-left: 30px;
     padding-top: 10px;
@@ -92,6 +118,18 @@ button {
     padding-bottom: 10px;
     display: flex;
     align-items: center;
+}
 
+button:hover {
+    box-shadow: 0 10px 10px hsla(0, 6%, 24%, 0.3);;
+    background: hsl(0, 80%, 86%)
 
 }
+
+input:invalid ~ .error-message {
+    display: block !important; 
+  }
+
+  /* input:invalid ~  .error-icon {
+    display: inline-block !important; 
+  } */
